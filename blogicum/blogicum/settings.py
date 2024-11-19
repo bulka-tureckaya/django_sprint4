@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -127,6 +128,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
+
 STATICFILES_DIRS = [
     BASE_DIR / 'static_dev',
 ]
@@ -141,6 +144,8 @@ AUTH_USER_MODEL = 'users.MyUser'
 
 LOGIN_REDIRECT_URL = 'blog:index'
 
+MEDIA_URL = '/media/'
+
 MEDIA_ROOT = BASE_DIR / 'media'
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
@@ -150,3 +155,5 @@ EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
 LOGIN_URL = 'login'
 
 LIMIT_POSTS = 10
+
+ALLOWED_HOSTS = ['*']
