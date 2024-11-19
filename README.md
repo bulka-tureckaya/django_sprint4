@@ -115,15 +115,15 @@
 Обновите механизм создания и изменения статичных страниц в проекте, используя CBV. Адреса уже существующих статичных страниц не должны измениться.
 
 
-Предыдущая версия https://github.com/SHURSHALO/Blogicum_sprint3
+Предыдущая версия https://github.com/bulka-tureckaya/django_sprint3
 ## Установка
 1. Клонируйте репозиторий на свою локальную машину:
 ```
-git clone git@github.com:SHURSHALO/Blogicum_FINAL_sprint4.git
+git clone https://github.com/bulka-tureckaya/django_sprint4.git
 ```
 2. Перейдите в директорию проекта:
 ```
-cd Blogicum_FINAL_sprint4
+cd django_sprint4
 ```
 3. Создайте и активируйте виртуальное окружение (опционально):
 ```
@@ -144,7 +144,11 @@ cd blogicum
 ```
 python manage.py migrate
 ```
-6. Создайте суперпользователя:
+6. Добавте данные в БД:
+```
+python manage.py loaddata db.json
+```
+7. Создайте суперпользователя:
 ```
 python manage.py createsuperuser
 ```
